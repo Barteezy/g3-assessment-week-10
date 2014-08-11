@@ -26,4 +26,10 @@
     border: 1px solid maroon;
 }
 
-.flashmessag
+.flashmessage {
+    border: 1px;
+    background-color: #9CBB8E;
+    padding: 10px;
+    margin-bottom: 60px;
+    width: 960px;
+}
