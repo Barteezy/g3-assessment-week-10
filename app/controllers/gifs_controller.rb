@@ -9,8 +9,13 @@ class GifsController < ApplicationController
     @gif = Gif.new(url: params[:gif][:url], description: params[:gif][:description])
     if @gif.save
       flash[:notice] = "gif created successfully"
+      redirect_to root_path
+    else
+      @gif = Gif.new
+      @gif.valid?
+      render :new
     end
-    redirect_to root_path
+
   end
 
 end
